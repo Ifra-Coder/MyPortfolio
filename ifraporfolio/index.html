@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ifra - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgba(0, 0, 33);
+        color: white;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 80px;
+        background-color: rgb(2, 2, 55);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a:hover {
+        color: rgb(128, 128, 216);
+        font-size: 1.04rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .firstsection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 0;
+      }
+
+      .firstsection .leftsection {
+        max-width: 500px;
+      }
+
+      .firstsection .rightsection img {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .buttons .btn {
+        margin-right: 15px;
+        padding: 12px;
+        background-color: #1e2167;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .buttons .btn:hover {
+        background-color: #373b8b;
+      }
+
+      /* About Section */
+      .about {
+        padding: 60px 0;
+        background-color: rgb(15, 15, 60);
+        text-align: center;
+      }
+
+      .about h1 {
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+      }
+
+      .about p {
+        max-width: 800px;
+        margin: 0 auto;
+        color: gray;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          display: none;
+        }
+
+        nav ul.show {
+          display: flex;
+        }
+
+        nav .menu-icon {
+          display: block;
+          cursor: pointer;
+          font-size: 24px;
+          color: white;
+        }
+
+        .firstsection {
+          flex-direction: column;
+        }
+
+        .firstsection .leftsection,
+        .firstsection .rightsection {
+          text-align: center;
+        }
+
+        .firstsection .rightsection img {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .firstsection .leftsection {
+          font-size: 1.5rem;
+        }
+
+        .about h1 {
+          font-size: 1.8rem;
+        }
+
+        .buttons .btn {
+          font-size: 16px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">Ifra's Portfolio</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home Section -->
+      <section id="home" class="firstsection container">
+        <div class="leftsection">
+          <h1>Hi, My name is <span class="purple">Ifra</span></h1>
+          <p>and I am a passionate Web Developer</p>
+          <div class="buttons">
+            <button class="btn">Download Resume</button>
+            <button class="btn">Visit Github</button>
+          </div>
+        </div>
+        <div class="rightsection">
+          <img src="bg.png" alt="Portfolio background" />
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <h1>About Me</h1>
+        <p>
+          I'm a web developer with experience in creating modern and responsive
+          websites. My passion lies in solving problems through creative coding,
+          and I love turning complex problems into simple, beautiful designs.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Ifra's Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+        copyright &#169; ifrasportfolio.com | All rights reserved
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
